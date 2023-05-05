@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <script src="{{ url_for('static', filename='js/test.js') }}"></script>
+    <title>{% block title %} {% endblock title %} Keonics</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Keonics</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Dashboard</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Courses</a>
+              <ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="addcourse">Add Course</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="managecourse">Manage Course</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Batch</a>
+              <ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="managebatch">Manage Batch</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Staff</a>
+              <ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="managestaff">Manage Staff</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="staffattendance">Staff Attendace</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="staffsalary">Staff Salary</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Student Management</a>
+              <ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="managestudent">Manage Student</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="trialstudent">Trial Students</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="studentattendace">Attendance</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="passoutstudent">Passout Students</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="enquiry">Enquiry Management</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="feemanagement">Fee Management</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="expensemanage">Manage Expense</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Generate Report</a>
+              <ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="feereport">Fee Report</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="gstreport">GST Report</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="expensereport">Expense Report</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="studentreport">Student Report</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Send SMS</a>
+              <ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="allsms">To Everyone</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="studentsms">To Students</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="staffsms">To Staff</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    {% block body %} {% endblock body %}
+  </body>
+</html>
