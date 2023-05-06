@@ -111,12 +111,12 @@ def allsms():
 
 
 @app.route("/studentsms")
-def allsms():
+def studentsms():
     return render_template("stud_sms.html")
 
 
 @app.route("/staffsms")
-def allsms():
+def staffsms():
     return render_template("staff_sms.html")
 
 
